@@ -767,7 +767,6 @@ Route 53 (DNS) --> CloudFront (CDN for static assets)
 
 ---
 
-## Quick Revision Cheat Sheet (for the night before interview)
 
 - **Client-Server:** separation of concerns, scalability.
 - **REST:** resource-based, stateless, HTTP verbs.
