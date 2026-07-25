@@ -384,13 +384,13 @@ function solveProblemThree(input) {
 
 ### Strong Answers for Three Questions
 
-**Q: What is the brute force approach?**  
+**Q: What is the brute force approach?**
 A: "I would first solve it directly by checking all relevant possibilities. That may be O(n^2), but it proves correctness and gives me a baseline to optimize."
 
-**Q: How would you optimize it?**  
+**Q: How would you optimize it?**
 A: "I would look for repeated work. If I repeatedly search for something, I can often use a HashMap or Set. If order matters, I can sort or use pointers. If subproblems repeat, I can memoize."
 
-**Q: What edge cases would you test first?**  
+**Q: What edge cases would you test first?**
 A: "Empty input, one item, duplicates, boundary values, and a case where no valid answer exists."
 
 <!-- DSA-JS-MERGE:START -->

@@ -791,6 +791,8 @@ Route 53 (DNS) --> CloudFront (CDN for static assets)
 - **CI/CD:** automated test → build → deploy pipeline, rollback strategy.
 - **Cloud Computing:** IaaS/PaaS/SaaS/FaaS, elasticity, pay-as-you-go.
 - **AWS:** EC2, S3, RDS, DynamoDB, ElastiCache, CloudFront, SQS, EKS, Route 53.
+- **AI INTEGRATION:**
+
 
 ---
 

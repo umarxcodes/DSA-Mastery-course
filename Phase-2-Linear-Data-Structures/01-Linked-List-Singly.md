@@ -2,13 +2,13 @@
 
 ## Chapter Metadata
 
-| Field | Value |
-|---|---|
-| Phase | Phase 2 - Linear Data Structures |
-| Chapter | 6 of 37 |
-| Difficulty | Intermediate |
-| Time to Master | 8-10 hours |
-| Prerequisites | JavaScript fundamentals, functions, arrays, objects, and basic problem solving |
+| Field          | Value                                                                          |
+| -------------- | ------------------------------------------------------------------------------ |
+| Phase          | Phase 2 - Linear Data Structures                                               |
+| Chapter        | 6 of 37                                                                        |
+| Difficulty     | Intermediate                                                                   |
+| Time to Master | 8-10 hours                                                                     |
+| Prerequisites  | JavaScript fundamentals, functions, arrays, objects, and basic problem solving |
 
 ## Table of Contents
 
@@ -146,7 +146,6 @@ In interviews, every topic should be explained through four questions:
 
 **Edge checks:** Confirm behavior for empty input, one item, duplicate values, already-ordered input, reverse-ordered input, and values at the smallest or largest allowed constraints.
 
-
 ## Complete Implementation
 
 ```javascript
@@ -155,30 +154,30 @@ In interviews, every topic should be explained through four questions:
  * Time: depends on the selected pattern, Space: depends on auxiliary data.
  */
 function solveWithPattern(input) {
-  const result = [];
+  const result = []
 
   for (const item of input) {
-    result.push(item);
+    result.push(item)
   }
 
-  return result;
+  return result
 }
 
-console.log(solveWithPattern([1, 2, 3]));
+console.log(solveWithPattern([1, 2, 3]))
 ```
 
 ## Step-by-Step Dry Run
 
 Use this dry-run discipline for every implementation in this chapter.
 
-| Step | Variable State | Why It Matters |
-|---|---|---|
-| Input | Receive sample input | Confirm expected output and constraints |
-| Initialize | Create pointers, maps, arrays, heap, stack, queue, or recursion state | A wrong initial state usually causes off-by-one bugs |
-| First iteration | Process the first meaningful item | Check whether the invariant becomes true |
-| Middle iteration | Update state without losing previous useful information | Most logic bugs happen here |
-| Boundary iteration | Process final item or final recursive return | Confirms loop termination |
-| Return | Return answer in exact requested format | Correct value with wrong shape still fails |
+| Step               | Variable State                                                        | Why It Matters                                       |
+| ------------------ | --------------------------------------------------------------------- | ---------------------------------------------------- |
+| Input              | Receive sample input                                                  | Confirm expected output and constraints              |
+| Initialize         | Create pointers, maps, arrays, heap, stack, queue, or recursion state | A wrong initial state usually causes off-by-one bugs |
+| First iteration    | Process the first meaningful item                                     | Check whether the invariant becomes true             |
+| Middle iteration   | Update state without losing previous useful information               | Most logic bugs happen here                          |
+| Boundary iteration | Process final item or final recursive return                          | Confirms loop termination                            |
+| Return             | Return answer in exact requested format                               | Correct value with wrong shape still fails           |
 
 ### Dry Run Example Mindset
 
@@ -188,26 +187,26 @@ Pick a small input where the answer is not obvious. Walk one line at a time. Aft
 
 ## Time & Space Complexity Analysis
 
-| Operation | Time | Space | Why |
-|---|---:|---:|---|
-| Brute force scan | O(n^2) | O(1) | Checks many pairs or repeated work |
+| Operation                |             Time |        Space | Why                                       |
+| ------------------------ | ---------------: | -----------: | ----------------------------------------- |
+| Brute force scan         |           O(n^2) |         O(1) | Checks many pairs or repeated work        |
 | Optimized lookup/pattern | O(n) or O(log n) | O(n) or O(1) | Uses structure, ordering, or cached state |
-| Sorting-based approach | O(n log n) | O(1) to O(n) | Sorting dominates the runtime |
-| Recursive approach | Depends on tree | O(depth) | Call stack counts as space |
+| Sorting-based approach   |       O(n log n) | O(1) to O(n) | Sorting dominates the runtime             |
+| Recursive approach       |  Depends on tree |     O(depth) | Call stack counts as space                |
 
 Always explain the dominant term. If one loop runs after another, add their costs. If one loop is inside another, multiply. If recursion branches, draw the recursion tree.
 
 ## All Operations / Variations
 
-| Variation | When To Use | Interview Signal |
-|---|---|---|
-| Brute force | First explanation, tiny input, baseline correctness | You can decompose the problem |
-| HashMap / Set | Need fast membership, counts, grouping, or complements | You know memory-time trade-offs |
-| Two pointers | Sorted arrays, palindromes, pair constraints | You can use order to reduce work |
-| Sliding window | Contiguous subarray or substring with a condition | You can maintain state incrementally |
-| Recursion / DFS | Trees, graphs, combinations, divide and conquer | You can express subproblems cleanly |
-| Heap / Priority Queue | Top-K, streaming min/max, merging sorted sources | You can retrieve priority efficiently |
-| Dynamic Programming | Counting, optimization, overlapping subproblems | You can define state and recurrence |
+| Variation             | When To Use                                            | Interview Signal                      |
+| --------------------- | ------------------------------------------------------ | ------------------------------------- |
+| Brute force           | First explanation, tiny input, baseline correctness    | You can decompose the problem         |
+| HashMap / Set         | Need fast membership, counts, grouping, or complements | You know memory-time trade-offs       |
+| Two pointers          | Sorted arrays, palindromes, pair constraints           | You can use order to reduce work      |
+| Sliding window        | Contiguous subarray or substring with a condition      | You can maintain state incrementally  |
+| Recursion / DFS       | Trees, graphs, combinations, divide and conquer        | You can express subproblems cleanly   |
+| Heap / Priority Queue | Top-K, streaming min/max, merging sorted sources       | You can retrieve priority efficiently |
+| Dynamic Programming   | Counting, optimization, overlapping subproblems        | You can define state and recurrence   |
 
 ## Common Patterns and Use Cases
 
@@ -320,8 +319,8 @@ Explain the brute force idea, then improve it by choosing a pattern from this ch
  * Replace this with the chapter-specific optimized technique while practicing.
  */
 function solveProblemOne(input) {
-  if (input == null) return null;
-  return input;
+  if (input == null) return null
+  return input
 }
 ```
 
@@ -334,8 +333,8 @@ Focus on the invariant. The invariant is the rule that remains true after every 
  * Use this to practice writing an invariant before implementation.
  */
 function solveProblemTwo(input) {
-  const state = Array.isArray(input) ? [...input] : input;
-  return state;
+  const state = Array.isArray(input) ? [...input] : input
+  return state
 }
 ```
 
@@ -348,7 +347,7 @@ Dry-run the smallest non-trivial input. If that works, test the edge cases.
  * Always test the smallest non-trivial case.
  */
 function solveProblemThree(input) {
-  return input;
+  return input
 }
 ```
 
@@ -365,23 +364,23 @@ function solveProblemThree(input) {
 
 ## Mini Practice Problems
 
-| # | Problem | Difficulty |
-|---:|---|---|
-| 1 | Explain the concept to a beginner in two sentences | Easy |
-| 2 | Write the brute force approach for the canonical problem | Easy |
-| 3 | Optimize it using the main pattern | Medium |
-| 4 | Dry-run the optimized code on three inputs | Medium |
-| 5 | Explain time and space complexity out loud | Medium |
+|   # | Problem                                                  | Difficulty |
+| --: | -------------------------------------------------------- | ---------- |
+|   1 | Explain the concept to a beginner in two sentences       | Easy       |
+|   2 | Write the brute force approach for the canonical problem | Easy       |
+|   3 | Optimize it using the main pattern                       | Medium     |
+|   4 | Dry-run the optimized code on three inputs               | Medium     |
+|   5 | Explain time and space complexity out loud               | Medium     |
 
 ## Chapter Summary Table
 
-| Topic | Must Remember |
-|---|---|
-| Definition | Know the simplest explanation |
-| Analogy | Use it to reason about trade-offs |
-| Implementation | Write clean JavaScript with tests |
-| Complexity | Explain why, not just what |
-| Edge cases | Test before declaring done |
+| Topic               | Must Remember                      |
+| ------------------- | ---------------------------------- |
+| Definition          | Know the simplest explanation      |
+| Analogy             | Use it to reason about trade-offs  |
+| Implementation      | Write clean JavaScript with tests  |
+| Complexity          | Explain why, not just what         |
+| Edge cases          | Test before declaring done         |
 | Interview readiness | Communicate the plan and invariant |
 
 ## Mock Interview Questions
@@ -399,16 +398,17 @@ function solveProblemThree(input) {
 
 ### Strong Answers for Three Questions
 
-**Q: What is the brute force approach?**  
+**Q: What is the brute force approach?**
 A: "I would first solve it directly by checking all relevant possibilities. That may be O(n^2), but it proves correctness and gives me a baseline to optimize."
 
-**Q: How would you optimize it?**  
+**Q: How would you optimize it?**
 A: "I would look for repeated work. If I repeatedly search for something, I can often use a HashMap or Set. If order matters, I can sort or use pointers. If subproblems repeat, I can memoize."
 
-**Q: What edge cases would you test first?**  
+**Q: What edge cases would you test first?**
 A: "Empty input, one item, duplicates, boundary values, and a case where no valid answer exists."
 
 <!-- DSA-JS-MERGE:START -->
+
 ## Integrated DSA JS Course Material
 
 This section consolidates useful non-empty material from the older `DSA JS` course into this Mastery chapter so `DSA-Mastery-Roadmap` becomes the single course source.
@@ -882,8 +882,7 @@ let curr = this.head;
     }
 
     this.head = prev;
-
-}
+                                                                                                                                                                                                                                                                                                                                                                     }
 
 // ----------------------------
 // Find Middle Node
@@ -979,6 +978,7 @@ Sort List
 Reorder List
 
 Flatten a Multilevel Doubly Linked List
+
 <!-- DSA-JS-MERGE:END -->
 
 ---

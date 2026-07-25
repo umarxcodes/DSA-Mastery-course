@@ -1,4 +1,4 @@
-# Hash Tables and Hash Maps - The Speed Secret
+v# Hash Tables and Hash Maps - The Speed Secret
 
 ## Chapter Metadata
 
@@ -12,26 +12,50 @@
 
 ## Table of Contents
 
-1. [Simple Definition](#simple-definition)
-2. [Real-World Analogy](#real-world-analogy)
-3. [Visual Representation](#visual-representation)
-4. [Core Concept Explanation](#core-concept-explanation)
-5. [Complete Implementation](#complete-implementation)
-6. [Step-by-Step Dry Run](#step-by-step-dry-run)
-7. [Time & Space Complexity Analysis](#time--space-complexity-analysis)
-8. [All Operations / Variations](#all-operations--variations)
-9. [Common Patterns and Use Cases](#common-patterns-and-use-cases)
-10. [Multiple Approaches](#multiple-approaches)
-11. [Interview Gold Notes](#interview-gold-notes)
-12. [Common Mistakes](#common-mistakes)
-13. [Best Practices](#best-practices)
-14. [Senior Engineer Notes](#senior-engineer-notes)
-15. [Edge Cases](#edge-cases)
-16. [Tricky Interview Problems](#tricky-interview-problems)
-17. [Revision Cheat Sheet](#revision-cheat-sheet)
-18. [Mini Practice Problems](#mini-practice-problems)
-19. [Chapter Summary Table](#chapter-summary-table)
-20. [Mock Interview Questions](#mock-interview-questions)
+- [Chapter Metadata](#chapter-metadata)
+- [Table of Contents](#table-of-contents)
+- [Simple Definition](#simple-definition)
+- [Real-World Analogy](#real-world-analogy)
+- [Visual Representation](#visual-representation)
+- [Core Concept Explanation](#core-concept-explanation)
+- [Chapter-Specific Mastery Checklist](#chapter-specific-mastery-checklist)
+- [Deep Teaching Notes](#deep-teaching-notes)
+  - [1. Hashing, buckets, collision handling, chaining, open addressing](#1-hashing-buckets-collision-handling-chaining-open-addressing)
+  - [2. JavaScript Map vs Object vs Set](#2-javascript-map-vs-object-vs-set)
+  - [3. HashMap from scratch and O(1) average analysis](#3-hashmap-from-scratch-and-o1-average-analysis)
+  - [4. Two Sum, anagrams, grouping, memoization, prefix sum plus HashMap](#4-two-sum-anagrams-grouping-memoization-prefix-sum-plus-hashmap)
+- [Complete Implementation](#complete-implementation)
+- [Step-by-Step Dry Run](#step-by-step-dry-run)
+  - [Dry Run Example Mindset](#dry-run-example-mindset)
+- [Time \& Space Complexity Analysis](#time--space-complexity-analysis)
+- [All Operations / Variations](#all-operations--variations)
+- [Common Patterns and Use Cases](#common-patterns-and-use-cases)
+- [Multiple Approaches](#multiple-approaches)
+  - [Brute Force](#brute-force)
+  - [Optimized](#optimized)
+  - [Optimal](#optimal)
+- [Interview Gold Notes](#interview-gold-notes)
+- [Common Mistakes](#common-mistakes)
+- [Best Practices](#best-practices)
+  - [JavaScript Code Quality Rules](#javascript-code-quality-rules)
+- [Senior Engineer Notes](#senior-engineer-notes)
+- [Edge Cases](#edge-cases)
+- [Tricky Interview Problems](#tricky-interview-problems)
+  - [Problem 1: Two Sum](#problem-1-two-sum)
+  - [Problem 2: Group Anagrams](#problem-2-group-anagrams)
+  - [Problem 3: Subarray Sum Equals K](#problem-3-subarray-sum-equals-k)
+- [Revision Cheat Sheet](#revision-cheat-sheet)
+- [Mini Practice Problems](#mini-practice-problems)
+- [Chapter Summary Table](#chapter-summary-table)
+- [Mock Interview Questions](#mock-interview-questions)
+  - [Strong Answers for Three Questions](#strong-answers-for-three-questions)
+- [Integrated DSA JS Course Material](#integrated-dsa-js-course-material)
+  - [Imported Notes: `DSA JS/src/data-structures/hash-map/notes.md`](#imported-notes-dsa-jssrcdata-structureshash-mapnotesmd)
+  - [Imported Notes: `DSA JS/src/data-structures/hash-map/practice.md`](#imported-notes-dsa-jssrcdata-structureshash-mappracticemd)
+- [Master Prompt Target Expansion](#master-prompt-target-expansion)
+  - [Mastery Expansion 1: hashing](#mastery-expansion-1-hashing)
+  - [Mastery Expansion 2: collisions](#mastery-expansion-2-collisions)
+  - [Mastery Expansion 3: frequency maps](#mastery-expansion-3-frequency-maps)
 
 ## Simple Definition
 
@@ -386,13 +410,13 @@ function solveProblemThree(input) {
 
 ### Strong Answers for Three Questions
 
-**Q: What is the brute force approach?**  
+**Q: What is the brute force approach?**
 A: "I would first solve it directly by checking all relevant possibilities. That may be O(n^2), but it proves correctness and gives me a baseline to optimize."
 
-**Q: How would you optimize it?**  
+**Q: How would you optimize it?**
 A: "I would look for repeated work. If I repeatedly search for something, I can often use a HashMap or Set. If order matters, I can sort or use pointers. If subproblems repeat, I can memoize."
 
-**Q: What edge cases would you test first?**  
+**Q: What edge cases would you test first?**
 A: "Empty input, one item, duplicates, boundary values, and a case where no valid answer exists."
 
 <!-- DSA-JS-MERGE:START -->
